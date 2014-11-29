@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="NfcBasics.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NfcBasics"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="12">
+            <TextBlock Text="NFC Read/Write" Style="{StaticResource BaseTextBlockStyle}" Margin="12,0"/>
+            <TextBlock Text="uri demos" Margin="9,-8,0,0" Style="{StaticResource HeaderTextBlockStyle}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="12">
+            <Button Content="Read Tag" Tapped="ReadTag_Tapped"/>
+            <Button Content="Write Tag" Tapped="WriteTag_Tapped"/>
+        </StackPanel>
+    </Grid>
+</Page>
